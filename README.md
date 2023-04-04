@@ -54,41 +54,52 @@ Im going to make a docker for all of this eventually and just run it without a v
 
 ### 1. Install Ansible, Terraform, Docker, & git
 #### Ansible (can be in virtural machine or native on windows under kali app, must be in linux)
-  sudo apt update
-  sudo apt install ansible
+  
+  >sudo apt update
+  
+  >sudo apt install ansible
   
 #### Terraform
 - Best to download the binary and unzip and follow manually install
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-- sudo apt-get install unzip
-- unzip terraform_1.4.4_linux_amd64.zip
-- sudo mv terraform /usr/local/bin/
-- terraform (to test install)
+ 
+>sudo apt-get install unzip
+
+>unzip terraform_1.4.4_linux_amd64.zip
+
+>sudo mv terraform /usr/local/bin/
+
+>terraform 
  
  #### Docker
   https://bughacking.com/how-to-install-docker-on-kali-linux-wsl2/
 
-  sudo mkdir -m 0755 -p /etc/apt/keyrings
-  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  >sudo mkdir -m 0755 -p /etc/apt/keyrings
+  
+  >curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-  echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  >echo \
+  >"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  >"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  >sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   
-  sudo apt-get update
-  sudo apt-get install docker
+  >sudo apt-get update
   
-  sudo docker run hello-world
+  >sudo apt-get install docker
+  
+  >sudo docker run hello-world
   
   #### Git
-  sudo apt-get install git
+  
+  >sudo apt-get install git
   
   ### 2. Install Ansible General Modules
-  ansible-galaxy collection install community.general
+  
+  >ansible-galaxy collection install community.general
   
   ### 3. Git clone repo
-  git clone https://github.com/ralphte/build_a_phish
+  
+  >git clone https://github.com/ralphte/build_a_phish
   
   ### 4. Customize the variables inside the vars folder.
   
@@ -121,7 +132,7 @@ If you would like to modify the phishlet or change lures, please edit the follow
 
 You can check the evilginx logs for session data with the following command.
 
-'docker logs evilginx2'
+>docker logs evilginx2
 
 ### Gophish
 
@@ -129,7 +140,7 @@ You can access gophish via the hostname set for "gophish_admin_hostname"
 
 To get the password on first login check the docker logs
 
-'docker logs gophish'
+>docker logs gophish
 
 ### Mitmproxy
 
