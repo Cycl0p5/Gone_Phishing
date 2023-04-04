@@ -72,48 +72,48 @@ Im going to make a docker for all of this eventually and just run it without a v
 >terraform 
  
  #### Docker
-  https://bughacking.com/how-to-install-docker-on-kali-linux-wsl2/
+https://bughacking.com/how-to-install-docker-on-kali-linux-wsl2/
 
-  >sudo mkdir -m 0755 -p /etc/apt/keyrings
+>sudo mkdir -m 0755 -p /etc/apt/keyrings
   
-  >curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-  >echo \
-  >"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  >"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  >sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+>echo \
+>"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+>"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+>sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   
-  >sudo apt-get update
+>sudo apt-get update
   
-  >sudo apt-get install docker
+>sudo apt-get install docker
   
-  >sudo docker run hello-world
+>sudo docker run hello-world
   
-  #### Git
+#### Git
   
-  >sudo apt-get install git
+>sudo apt-get install git
   
-  ### 2. Install Ansible General Modules
+### 2. Install Ansible General Modules
   
-  >ansible-galaxy collection install community.general
+>ansible-galaxy collection install community.general
   
-  ### 3. Git clone repo
+### 3. Git clone repo
   
-  >git clone https://github.com/ralphte/build_a_phish
+>git clone https://github.com/ralphte/build_a_phish
   
-  ### 4. Customize the variables inside the vars folder.
+### 4. Customize the variables inside the vars folder.
   
-  ### 5. Create API Keys for VM providers
+### 5. Create API Keys for VM providers
   
 ## Usage
 
 ### Create
 
-'ansible-playbook deploy.yml --tags phish'
+>ansible-playbook deploy.yml --tags phish
 
 ### Destroy
 
-'ansible-playbook destroy.yml --tags phish'
+>ansible-playbook destroy.yml --tags phih'
 
 ### Secrets
 
@@ -126,9 +126,9 @@ You have three choices
 ### Evilginx2
 If you would like to modify the phishlet or change lures, please edit the following files.
 
-'roles\evilginx2-docker\templates\config.yaml.j2'
+>roles\evilginx2-docker\templates\config.yaml.j2'
 
-'roles\evilginx2-docker\templates\o365.yaml.j2'
+>roles\evilginx2-docker\templates\o365.yaml.j2'
 
 You can check the evilginx logs for session data with the following command.
 
