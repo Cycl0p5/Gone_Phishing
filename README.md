@@ -70,6 +70,13 @@ Im going to make a docker for all of this eventually and just run it without a v
 >sudo mv terraform /usr/local/bin/
 
 >terraform 
+
+or
+
+>wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+>echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com kinetic main | sudo tee >/etc/apt/sources.list.d/hashicorp.list
+
+>sudo apt update && sudo apt install terraform
  
  #### Docker
 https://bughacking.com/how-to-install-docker-on-kali-linux-wsl2/
