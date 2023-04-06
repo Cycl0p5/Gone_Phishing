@@ -2,7 +2,7 @@
 Infrastructure as code to set up a phishing campaign
 
 # Authors and acknowladgments
-Written by Cycl0p5
+Written by Cycl0p5 to work with a kali linux host vm 
 Inspired by Black Hills Information Security Ralph May and his youtube video
 
 BHIS | How to Build a Phishing Engagement - Coding TTP's - Ralph May
