@@ -40,6 +40,7 @@ Logo	Provider	Services
   - Linux or MacOs
   - Ansible
   - Terraform
+  - AWS CLI
   - (optional) Secrets Provider cli
   -   - lpass (lastpass)
   -   - op (onpassword)
@@ -52,7 +53,7 @@ You will need a managment domain. This domain can be the same domain used for ph
 
 Im going to make a docker for all of this eventually and just run it without a vm or wsl
 
-### 1. Install Ansible, Terraform, Docker, & git
+### 1. Install Ansible, Terraform, Docker, AWS CLI, & git
 #### Ansible (can be in virtural machine or native on windows under kali app, must be in linux)
   
   >sudo apt update
@@ -95,6 +96,12 @@ https://bughacking.com/how-to-install-docker-on-kali-linux-wsl2/
 >sudo apt-get install docker
   
 >sudo docker run hello-world
+
+#### AWS CLI
+
+>sudo apt install aws
+
+will need AWS crds for cli not posting those here
   
 #### Git
   
